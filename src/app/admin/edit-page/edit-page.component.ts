@@ -31,7 +31,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
       .pipe(
         switchMap((params: Params) => {
           // tslint:disable-next-line:no-string-literal
-          return this.postService.getById(params['id'])
+          return this.postService.getById(params['id']);
         })
       ).subscribe((post: Post) => {
         this.post = post;
@@ -64,4 +64,5 @@ export class EditPageComponent implements OnInit, OnDestroy {
       this.uSub.unsubscribe();
     }
   }
+
 }
